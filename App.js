@@ -19,9 +19,9 @@ const MainScreen = () => {
       let prompt;
 
       if (selectedTopic === 'Integrals') {
-        prompt = 'Generate a random integral problem with complexity only up to u substitution. Give the problem in multiple choice format.';
+        prompt = 'Generate a random integral problem with complexity only up to u substitution. It should take less than 2 mins to solve for someone who has taken Calculus II. Give the problem in multiple choice format but exclude the letters.';
       } else {
-        prompt = `Create a very simple ${selectedTopic} problem to solve. If the topic is psychology, ask what the DSM-5 is and give it in multiple choice format.`;
+        prompt = `Create a very simple ${selectedTopic} problem to solve. If the topic is psychology, ask what the DSM-5 is and give it in multiple choice format but exclude the letters.`;
       }
 
       const response = await axios.post(
